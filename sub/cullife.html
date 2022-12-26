@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/sub.css" />
+    <script src="../js/main.js"></script>
+    <script src="../js/btn.js"></script>
+    <link rel="icon" href="../img/icon.png" />
+    <title>CULTURAL LIFE</title>
+    <style>
+      #main {
+        margin: 0 !important;
+        height: 100vh !important;
+      }
+      .area {
+        overflow-y: scroll !important;
+        max-height: calc(100% - 220px) !important;
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+      }
+      .area::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera*/
+      }
+      .plate {
+        box-shadow: none !important;
+        border: none !important;
+        padding: 0 !important;
+        display: grid !important;
+        place-items: center !important;
+      }
+      .plate img {
+        box-shadow: 0 0 7.5px 0 rgb(0, 255, 125) inset,
+          0 0 7.5px 0 rgb(0, 255, 125);
+        border: solid rgb(0, 255, 125);
+        max-width: 100%;
+        max-height: 100%;
+      }
+    </style>
+  </head>
+  <body onload="clock(); status();">
+    <div id="overlayA">
+      <div id="login">
+        <div id="loginbar">
+          <div id="esc">
+            <img id="alertx" src="../img/bar/x.png" />
+          </div>
+        </div>
+        <div id="loginArea" style="position: relative">
+          <div id="alert">!!! WARNING !!!<br /><span>TOO SMALL!</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="main">
+      <div id="bar">
+        <div id="time"></div>
+        <div id="status">
+          <img id="img1" src=i"mg/icon.png" /> <img id="img2" src=i"mg/icon.png"
+          /> <img id="img3" src=i"mg/icon.png" />
+        </div>
+      </div>
+
+      <div class="header">Cultural Life</div>
+
+      <div id="cul" class="area">
+        <div class="plate">
+          <img src="../img/culture/wednesday.png" />
+        </div>
+        <div class="plate">
+          <img src="../img/culture/redvelvetbirthday.png" />
+        </div>
+        <div class="plate">
+          <img src="../img/culture/newjeansnewjeans.png" />
+        </div>
+        <div class="plate">
+          <img src="../img/culture/lesserafimfearless.png" />
+        </div>
+        <div class="plate">
+          <img src="../img/culture/lesserafimantifragile.png" />
+        </div>
+        <div class="plate">
+          <img src="../img/culture/imaginedragonsevolve.png" />
+        </div>
+        <div class="plate">
+          <img src="../img/culture/coldplayx&y.png" />
+        </div>
+        <div class="plate">
+          <img src="../img/culture/coldplayparachutes.png" />
+        </div>
+        <div class="plate">
+          <img src="../img/culture/coldplayghoststories.png" />
+        </div>
+      </div>
+
+      <div id="footer">
+        <div id="snsbox">
+          <ul>
+            <!-- youtube -->
+            <li>
+              <img
+                id="snsbtn1"
+                src="../img/sns/ytb01.png"
+                onclick="btnclk(this);"
+              />
+            </li>
+            <!-- twitter -->
+            <li>
+              <img
+                id="snsbtn2"
+                src="../img/sns/twr01.png"
+                onclick="btnclk(this);"
+              />
+            </li>
+            <!-- instagram -->
+            <li>
+              <img
+                id="snsbtn3"
+                src="../img/sns/itg01.png"
+                onclick="btnclk(this);"
+              />
+            </li>
+            <!-- facebook -->
+            <li>
+              <img
+                id="snsbtn4"
+                src="../img/sns/fbk01.png"
+                onclick="btnclk(this);"
+              />
+            </li>
+          </ul>
+        </div>
+
+        <div id="copyright">
+          Copyright <span id="cc">©</span> 2022 LSJ All rights reserved.
+        </div>
+
+        <div id="logobox">
+          <a href="/index.html"><img src="../img/logo.png" /></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/sub.css" />
+    <script src="../js/main.js"></script>
+    <script src="../js/btn.js"></script>
+    <link rel="icon" href="../img/icon.png" />
+    <title>LOG</title>
+    <style>
+      #main {
+        margin: 0 !important;
+        height: 100vh !important;
+      }
+      .area {
+        overflow-y: scroll !important;
+        max-height: calc(100% - 220px) !important;
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+      }
+      .area::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera*/
+      }
+      .plate {
+        min-height: 20vh;
+      }
+    </style>
+  </head>
+  <body onload="clock(); status();">
+    <div id="overlayA">
+      <div id="login">
+        <div id="loginbar">
+          <div id="esc"><img id="alertx" src="../img/bar/x.png" /></div>
+        </div>
+        <div id="loginArea" style="position: relative">
+          <div id="alert">!!! WARNING !!!<br /><span>TOO SMALL!</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="main">
+      <div id="bar">
+        <div id="time"></div>
+        <div id="status">
+          <img id="img1" src=i"mg/icon.png" /> <img id="img2" src=i"mg/icon.png"
+          /> <img id="img3" src=i"mg/icon.png" />
+        </div>
+      </div>
+
+      <div class="header">DAILY LOG</div>
+
+      <div id="logs" class="area">
+        <div class="plate">
+          <div class="fold" id="1209" onclick="logPopUP(this);">
+            <p>12/09</p>
+          </div>
+        </div>
+        <div class="plate">
+          <div class="fold" id="1205" onclick="logPopUP(this);">
+            <p>12/05</p>
+          </div>
+        </div>
+        <div class="plate">
+          <div class="fold" id="1201" onclick="logPopUP(this);">
+            <p>12/01</p>
+          </div>
+        </div>
+        <div class="plate">
+          <div class="fold"><p>11/25</p></div>
+        </div>
+        <div class="plate">
+          <div class="fold"><p>11/14</p></div>
+        </div>
+        <div class="plate">
+          <div class="fold"><p>10/30</p></div>
+        </div>
+        <div class="plate">
+          <div class="fold"><p>10/16</p></div>
+        </div>
+        <div class="plate">
+          <div class="fold"><p>09/29</p></div>
+        </div>
+        <div class="plate">
+          <div class="fold"><p>09/15</p></div>
+        </div>
+        <div class="plate">
+          <div class="fold"><p>09/09</p></div>
+        </div>
+        <div class="plate">
+          <div class="fold"><p>08/25</p></div>
+        </div>
+        <div class="plate">
+          <div class="fold"><p>08/13</p></div>
+        </div>
+        <div class="plate">
+          <div class="fold"><p>08/03</p></div>
+        </div>
+      </div>
+
+      <div id="footer">
+        <div id="snsbox">
+          <ul>
+            <!-- youtube -->
+            <li>
+              <img
+                id="snsbtn1"
+                src="../img/sns/ytb01.png"
+                onclick="btnclk(this);"
+              />
+            </li>
+            <!-- twitter -->
+            <li>
+              <img
+                id="snsbtn2"
+                src="../img/sns/twr01.png"
+                onclick="btnclk(this);"
+              />
+            </li>
+            <!-- instagram -->
+            <li>
+              <img
+                id="snsbtn3"
+                src="../img/sns/itg01.png"
+                onclick="btnclk(this);"
+              />
+            </li>
+            <!-- facebook -->
+            <li>
+              <img
+                id="snsbtn4"
+                src="../img/sns/fbk01.png"
+                onclick="btnclk(this);"
+              />
+            </li>
+          </ul>
+        </div>
+
+        <div id="copyright">
+          Copyright <span id="cc">©</span> 2022 LSJ All rights reserved.
+        </div>
+
+        <div id="logobox">
+          <a href="index.html"><img src="../img/logo.png" /></a>
+        </div>
+      </div>
+
+      <div id="1209_p" class="overlay_log">
+        <div class="popup_log">
+          <p>22/12/09</p>
+          <a class="close" onclick="logClose();">&times;</a>
+          <div class="contentBox"><p class="content">hello</p></div>
+        </div>
+      </div>
+      <div id="1205_p" class="overlay_log">
+        <div class="popup_log">
+          <p>22/12/05</p>
+          <a class="close" onclick="logClose();">&times;</a>
+          <div class="contentBox"><p class="content">world</p></div>
+        </div>
+      </div>
+
+      <div id="1201_p" class="overlay_log">
+        <div class="popup_log">
+          <p>22/12/01</p>
+          <a class="close" onclick="logClose();">&times;</a>
+          <div class="contentBox">
+            <p class="content">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum. Sed
+              ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi architecto beatae vitae
+              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
+              est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
+              velit, sed quia non numquam eius modi tempora incidunt ut labore
+              et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima
+              veniam, quis nostrum exercitationem ullam corporis suscipit
+              laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem
+              vel eum iure reprehenderit qui in ea voluptate velit esse quam
+              nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo
+              voluptas nulla pariatur?
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

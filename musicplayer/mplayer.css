@@ -1,0 +1,106 @@
+@font-face {
+  font-family: "1997";
+  src: url("../font/1997.ttf") format("truetype");
+}
+@font-face {
+  font-family: "rect";
+  src: url("../font/Rectaxel.ttf") format("truetype");
+}
+
+/* bgm */
+#bgm {
+  object-fit: fill;
+  height: 100%;
+  font-family: "1997";
+  font-size: 10px;
+  padding: 20px;
+  display: grid;
+  place-items: center;
+}
+
+.music-img,
+.volume,
+#volume,
+.layer,
+.music-progress {
+  display: none;
+}
+
+.btn {
+  outline: none;
+  border: 0;
+  background: transparent;
+  font-size: 15px;
+  color: white;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  border: 2px solid rgb(0, 255, 125);
+  display: grid;
+  place-items: center;
+  box-shadow: 0 0 5px 0.5px rgb(0, 255, 125), 0 0 5px 0 rgb(0, 255, 125) inset;
+}
+
+.top-icons {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.music-info {
+  text-align: center;
+  width: 100%;
+  height: calc(100% - 100px);
+  margin: 20px 0;
+  display: grid;
+  place-items: center;
+}
+.music-info h2 {
+  font-size: 12.5px;
+  color: white;
+  text-shadow: 0 0 15px rgb(0, 255, 125), 0 0 30px rgb(0, 255, 125),
+    0 0 45px rgb(0, 255, 125);
+}
+
+.music-controls {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.prevbtn,
+.nextbtn,
+.playpause {
+  border: 0;
+  outline: 0;
+  font-size: 15px;
+  background: transparent;
+  color: white;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  border: 2px solid rgb(0, 255, 125);
+  display: grid;
+  place-items: center;
+  box-shadow: 0 0 5px 0.5px rgb(0, 255, 125), 0 0 5px 0 rgb(0, 255, 125) inset;
+}
+
+.playpause:hover,
+.prevbtn:hover,
+.nextbtn:hover {
+  color: rgb(0, 255, 125);
+}
+
+.playpause {
+  display: grid;
+  place-items: center;
+}
+
+.fa-play {
+  position: relative;
+  display: inline-block;
+}
+
+.color {
+  color: rgb(0, 255, 125);
+}

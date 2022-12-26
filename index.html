@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/widget.css" />
+    <link rel="stylesheet" href="musicplayer/mplayer.css" />
+    <script src="js/main.js"></script>
+    <script src="js/btn.js"></script>
+    <link rel="icon" href="img/icon.png" />
+    <title>Hello World</title>
+  </head>
+  <body onload="clock(); statusI(); newQuote(); rotate(); rotate2();">
+    <div id="overlayA">
+      <div id="login">
+        <div id="loginbar">
+          <div id="esc"><img id="alertx" src="img/bar/x.png" /></div>
+        </div>
+        <div id="loginArea" style="position: relative">
+          <div id="alert">!!! WARNING !!!<br /><span>TOO SMALL!</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="navbar" class="navContainer">
+      <!-- intro -->
+      <div class="navItem" onmouseover="hover(this)" onmouseout="unhover(this)">
+        <div class="navMBar">
+          <img onclick="clickSoundI();" src="img/bar/q.png" />
+          <img onclick="clickSoundI();" src="img/bar/x.png" />
+        </div>
+        <a href="sub/intro.html"
+          ><div id="intro" onmouseover="hoverSound()">
+            <p class="navP">Intro</p>
+          </div></a
+        >
+      </div>
+      <!-- daily log -->
+      <div class="navItem" onmouseover="hover(this)" onmouseout="unhover(this)">
+        <div class="navMBar">
+          <img onclick="clickSoundI();" src="img/bar/q.png" />
+          <img onclick="clickSoundI();" src="img/bar/x.png" />
+        </div>
+        <a href="sub/log.html"
+          ><div id="log" onmouseover="hoverSound()">
+            <p class="navP">Daily<br />Log</p>
+          </div></a
+        >
+      </div>
+      <!-- gallery -->
+      <div class="navItem" onmouseover="hover(this)" onmouseout="unhover(this)">
+        <div class="navMBar">
+          <img onclick="clickSoundI();" src="img/bar/q.png" />
+          <img onclick="clickSoundI();" src="img/bar/x.png" />
+        </div>
+        <a href="sub/gallery.html"
+          ><div id="gallery" onmouseover="hoverSound()">
+            <p class="navP">Gallery</p>
+          </div></a
+        >
+      </div>
+      <!-- cultural life -->
+      <div class="navItem" onmouseover="hover(this)" onmouseout="unhover(this)">
+        <div class="navMBar">
+          <img onclick="clickSoundI();" src="img/bar/q.png" />
+          <img onclick="clickSoundI();" src="img/bar/x.png" />
+        </div>
+        <a href="sub/cullife.html"
+          ><div id="culife" onmouseover="hoverSound()">
+            <p class="navP">Cultural<br />Life</p>
+          </div></a
+        >
+      </div>
+      <!-- game -->
+      <div class="navItem" onmouseover="hover(this)" onmouseout="unhover(this)">
+        <div class="navMBar">
+          <img onclick="clickSoundI();" src="img/bar/q.png" />
+          <img onclick="clickSoundI();" src="img/bar/x.png" />
+        </div>
+        <a href="game/game.html">
+          <div id="game" onmouseover="hoverSound()">
+            <p class="navP">Game</p>
+          </div></a
+        >
+      </div>
+      <!-- theater -->
+      <div class="navItem" onmouseover="hover(this)" onmouseout="unhover(this)">
+        <div class="navMBar">
+          <img onclick="clickSoundI();" src="img/bar/q.png" />
+          <img onclick="clickSoundI();" src="img/bar/x.png" />
+        </div>
+        <a href="sub/theater.html"
+          ><div id="theater" onmouseover="hoverSound()">
+            <p class="navP">Theater</p>
+          </div></a
+        >
+      </div>
+    </div>
+
+    <div id="main">
+      <div id="bar">
+        <div id="time"></div>
+        <div id="status">
+          <img id="img1" src="img/icon.png" />
+          <img id="img2" src="img/icon.png" />
+          <img id="img3" src="img/icon.png" />
+        </div>
+      </div>
+
+      <div id="loginbox">
+        <div id="loginlogo">
+          <div id="headLogo">
+            <img src="img/head.png" />
+          </div>
+          <div id="login">
+            <div id="loginbar">
+              <div id="esc" onclick="popup(event)">
+                <p id="esctxt">ESC</p>
+              </div>
+            </div>
+
+            <div id="loginArea">
+              <div id="inputArea">
+                <input id="id" type="text" placeholder="Please enter ur Id" />
+                <input
+                  id="pw"
+                  type="password"
+                  placeholder="… And password too!"
+                />
+                <div id="logbtn" onclick="clickSoundI();">
+                  <p id="left" onclick="popup(event)">I'M fresh<br />new</p>
+                </div>
+                <div id="logbtn" onclick="clickSoundI();">
+                  <p id="right" onclick="popup(event)">hee-haw!!!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="footer">
+        <div id="snsbox">
+          <ul>
+            <!-- youtube -->
+            <li>
+              <img
+                id="snsbtn1"
+                src="img/sns/ytb01.png"
+                onclick="btnclk(this);"
+              />
+            </li>
+            <!-- twitter -->
+            <li>
+              <img
+                id="snsbtn2"
+                src="img/sns/twr01.png"
+                onclick="btnclk(this);"
+              />
+            </li>
+            <!-- instagram -->
+            <li>
+              <img
+                id="snsbtn3"
+                src="img/sns/itg01.png"
+                onclick="btnclk(this);"
+              />
+            </li>
+            <!-- facebook -->
+            <li>
+              <img
+                id="snsbtn4"
+                src="img/sns/fbk01.png"
+                onclick="btnclk(this);"
+              />
+            </li>
+          </ul>
+        </div>
+
+        <div id="copyright">
+          Copyright <span id="cc">©</span> 2022 LSJ Not all rights reserved.
+        </div>
+
+        <div id="logobox">
+          <a href="/index.html"><img src="img/logo.png" /></a>
+        </div>
+      </div>
+    </div>
+
+    <div id="widget" class="widContainer">
+      <!-- bgm refer from @saransh1399's work'-->
+      <div class="widItem">
+        <div id="bgm">
+          <div class="layer">
+            <div class="volume-slider">
+              <span class="bar"></span>
+              <input
+                type="range"
+                min="0.01"
+                max="1"
+                value="1"
+                step="0.01"
+                class="volumerange"
+              />
+            </div>
+          </div>
+
+          <div class="top-icons">
+            <div class="volume btn" id="volume">
+              <i id="volumeicon" class="fas fa-volume-up"></i>
+            </div>
+          </div>
+
+          <div class="music-img">
+            <img src="#" alt="song-images" id="img" />
+          </div>
+
+          <audio src="src/Attention.mp3" id="audio"></audio>
+
+          <div class="music-progress">
+            <div class="progress-bar">
+              <span class="progress-line"></span>
+              <input
+                type="range"
+                min="0"
+                max="100"
+                value="0"
+                class="progress"
+                id="progress"
+              />
+            </div>
+            <div class="duration">
+              <span class="current-time">0:00</span>
+              <span class="duration-time">0:00</span>
+            </div>
+          </div>
+
+          <div class="music-info">
+            <h2 id="title">New Jeans - Attention</h2>
+          </div>
+
+          <div class="music-controls">
+            <div class="repeat btn" id="repeat" onclick="clickSoundI();">
+              <i class="fas fa-redo-alt"></i>
+            </div>
+            <div class="prevbtn" id="prevbtn" onclick="clickSoundI();">
+              <i class="fas fa-backward"></i>
+            </div>
+            <div class="playpause" id="playpause" onclick="clickSoundI();">
+              <i id="playpause-btn" class="fas fa-play"></i>
+            </div>
+            <div class="nextbtn" id="nextbtn" onclick="clickSoundI();">
+              <i class="fas fa-forward"></i>
+            </div>
+            <div class="like btn" id="like" onclick="clickSoundI();">
+              <i id="likeicon" class="far fa-heart"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- clock refer from @thecodingpie and @rakupra558's work-->
+      <div class="widItem">
+        <div id="analog">
+          <div id="city">SEOUL</div>
+          <div class="clock">
+            <div class="hand hour"></div>
+            <div class="hand minute"></div>
+            <div class="hand second"></div>
+            <div class="number number1">•</div>
+            <div class="number number2">•</div>
+            <div class="number number3">•</div>
+            <div class="number number4">•</div>
+            <div class="number number5">•</div>
+            <div class="number number6">•</div>
+            <div class="number number7">•</div>
+            <div class="number number8">•</div>
+            <div class="number number9">•</div>
+            <div class="number number10">•</div>
+            <div class="number number11">•</div>
+            <div class="number number12">•</div>
+          </div>
+        </div>
+      </div>
+      <!-- clock2 -->
+      <div class="widItem">
+        <div id="analog">
+          <div id="city">NEWYORK</div>
+          <div class="clock" id="ny">
+            <div class="hand hour" id="nyhour"></div>
+            <div class="hand minute" id="nyminute"></div>
+            <div class="hand second" id="nysecond"></div>
+            <div class="number number1">•</div>
+            <div class="number number2">•</div>
+            <div class="number number3">•</div>
+            <div class="number number4">•</div>
+            <div class="number number5">•</div>
+            <div class="number number6">•</div>
+            <div class="number number7">•</div>
+            <div class="number number8">•</div>
+            <div class="number number9">•</div>
+            <div class="number number10">•</div>
+            <div class="number number11">•</div>
+            <div class="number number12">•</div>
+          </div>
+        </div>
+      </div>
+      <!-- quote refer from @amoedoamorim's work -->
+      <div class="widItem">
+        <div id="quote">
+          <div id="quotes"></div>
+        </div>
+        <div id="qbtnarea">
+          <button id="qbtn" type="button" onclick="newQuote(); clickSoundI();">
+            !!!
+          </button>
+        </div>
+      </div>
+      <!-- ad -->
+      <div class="widItem">
+        <div id="ad">
+          <div class="navItem" style="border: none; box-shadow: none">
+            <div class="navMBar" style="box-shadow: 0 0 7px 0 rgb(0, 255, 125)">
+              <img onclick="clickSoundI(); popup(event);" src="img/bar/x.png" />
+            </div>
+            <div id="adO">This is<br />AD</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="adBox">
+      <div class="navItem" style="border: none; box-shadow: none">
+        <div class="navMBar" style="box-shadow: 0 0 7px 0 rgb(0, 255, 125)">
+          <img onclick="clickSoundI();" id="xbtn" src="img/bar/x.png" />
+        </div>
+        <div id="adx">This is<br />AD</div>
+      </div>
+    </div>
+
+    <div id="popup">This is FAKE!</div>
+
+    <script src="musicplayer/mplayer.js"></script>
+  </body>
+</html>

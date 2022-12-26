@@ -1,0 +1,343 @@
+@font-face {
+  font-family: "1997";
+  src: url("../font/1997.ttf") format("truetype");
+}
+@font-face {
+  font-family: "rect";
+  src: url("../font/Rectaxel.ttf") format("truetype");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: 2px;
+}
+
+.widContainer {
+  display: grid;
+  gap: 10px;
+}
+
+.widItem {
+  background-color: black;
+  border: solid rgb(0, 255, 125);
+  box-shadow: 0px 0px 7.5px 2px rgb(0, 255, 125),
+    0 0 7.5px 0 rgb(0, 255, 125) inset;
+  position: relative;
+}
+
+/* clock */
+#analog {
+  text-align: center;
+  font-family: "rect";
+  font-size: 12px;
+  position: relative;
+  color: white;
+}
+#city {
+  height: 30px;
+  line-height: 30px;
+  font-size: 15px;
+  color: black;
+  border-bottom: solid rgb(0, 255, 125);
+  background-color: rgb(0, 255, 125);
+  box-shadow: 0 0 7px 0 rgb(0, 255, 125);
+}
+.clock {
+  aspect-ratio: 1 / 1;
+  width: auto;
+  background-color: black;
+  border-radius: 50%;
+  border: 4px solid white;
+  position: relative;
+  margin: 7.5%;
+}
+.clock::after {
+  content: "";
+  width: 6%;
+  height: 6%;
+  border-radius: 50%;
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+}
+.number {
+  --rotation: 0deg;
+  text-align: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  transform: rotate(var(--rotation));
+}
+.hand {
+  --rotation: 0deg;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  background: black;
+  transform-origin: bottom;
+  transform: translatex(-50%) rotate(var(--rotation));
+  border-radius: 30px;
+}
+.hour {
+  width: 2px;
+  height: 28%;
+  background-color: white;
+}
+.minute {
+  width: 2px;
+  height: 38%;
+  background-color: white;
+}
+.second {
+  width: 2px;
+  height: 40%;
+  background-color: rgb(0, 255, 125);
+}
+.number1 {
+  --rotation: 30deg;
+}
+.number2 {
+  --rotation: 60deg;
+}
+.number3 {
+  --rotation: 90deg;
+}
+.number4 {
+  --rotation: 120deg;
+}
+.number5 {
+  --rotation: 150deg;
+}
+.number6 {
+  --rotation: 180deg;
+}
+.number7 {
+  --rotation: 210deg;
+}
+.number8 {
+  --rotation: 240deg;
+}
+.number9 {
+  --rotation: 270deg;
+}
+.number10 {
+  --rotation: 300deg;
+}
+.number11 {
+  --rotation: 330deg;
+}
+
+/* quote */
+#quote {
+  text-align: center;
+  height: 70%;
+  background-color: black;
+  border-bottom: solid rgb(0, 255, 125);
+  position: relative;
+  word-break: normal;
+  color: white;
+  box-shadow: 0 0 7.5px 0 rgb(0, 255, 125) inset;
+}
+#quotes {
+  margin: 0 15px;
+  position: absolute;
+  top: 50%;
+  transform: translate(0%, -50%);
+  font-size: 12px;
+  line-height: 150%;
+  font-family: "1997";
+}
+#qbtnarea {
+  text-align: center;
+  height: calc(30% + 1px);
+  position: relative;
+  background-color: rgb(0, 255, 125);
+}
+#qbtn {
+  padding: 7.5px;
+  font-family: "rect";
+  font-size: 15px;
+  text-align: center;
+  cursor: pointer;
+  color: black;
+  background-color: white;
+  border: solid black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: inset -1.5px -1.5px gray;
+}
+#qbtn:active {
+  background-color: rgb(240, 240, 240) !important;
+  box-shadow: inset 1.5px 1.5px gray;
+}
+
+/* ad */
+#adO {
+  border: none;
+  position: absolute;
+  height: calc(100% - 20px);
+  width: 100%;
+  background-image: url("../img/ado.gif");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: grid;
+  place-items: center;
+  font-family: "rect";
+  font-size: 15px;
+  text-align: center;
+  text-shadow: 0 0 10px rgb(0, 255, 125), 0 0 20px rgb(0, 255, 125),
+    0 0 35px rgb(0, 255, 125);
+}
+
+/* full screen */
+/* grid */
+.widContainer {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+/* items */
+.widItem:first-child {
+  grid-column: 1/3;
+  grid-row: 1/2;
+}
+.widItem:nth-child(2) {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+.widItem:nth-child(3) {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+.widItem:nth-child(4) {
+  grid-column: 1/3;
+  grid-row: 3/4;
+}
+.widItem:last-child {
+  grid-column: 1/3;
+  grid-row: 4/5;
+}
+
+/* large */
+@media only screen and (max-width: 950px) {
+  /* grid */
+  .widContainer {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  /* items */
+  .widItem:first-child {
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+  .widItem:nth-child(2) {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .widItem:nth-child(3) {
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
+  .widItem:nth-child(4) {
+    grid-column: 2/4;
+    grid-row: 2/3;
+  }
+  .widItem:last-child {
+    grid-column: 4/5;
+    grid-row: 1/3;
+  }
+  /* widgets */
+  #quote {
+    height: 100%;
+    width: 80%;
+    float: left;
+    border-bottom: none;
+    border-right: solid rgb(0, 255, 125);
+  }
+  #qbtnarea {
+    height: 100%;
+    width: 20%;
+    float: left;
+  }
+}
+
+/* medium */
+@media only screen and (max-width: 650px) {
+  /* grid */
+  .widContainer {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  /* items */
+  .widItem:first-child {
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+  .widItem:nth-child(2) {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .widItem:nth-child(3) {
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
+  .widItem:nth-child(4) {
+    grid-column: 2/4;
+    grid-row: 2/3;
+  }
+  .widItem:last-child {
+    grid-column: 4/5;
+    grid-row: 1/3;
+  }
+  /* widgets */
+}
+
+/* small */
+@media only screen and (max-width: 425px) {
+  /* grid */
+  .widContainer {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+  /* items */
+  .widItem:first-child {
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+  .widItem:nth-child(2) {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .widItem:nth-child(3) {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  .widItem:nth-child(4) {
+    grid-column: 1/3;
+    grid-row: 3/4;
+  }
+  .widItem:last-child {
+    grid-column: 1/3;
+    grid-row: 4/5;
+  }
+  /* widgets */
+  #quote {
+    height: 100%;
+    width: 75%;
+    float: left;
+    border-bottom: none;
+    border-right: solid rgb(0, 255, 125);
+  }
+  #qbtnarea {
+    height: 100%;
+    width: 25%;
+    float: left;
+  }
+}

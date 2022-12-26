@@ -1,0 +1,97 @@
+@font-face {
+  font-family: "1997";
+  src: url("../font/1997.ttf") format("truetype");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: 2px;
+}
+
+.navContainer {
+  display: grid;
+  gap: 10px;
+  font-family: "1997";
+  text-align: center;
+}
+.navItem {
+  background-color: none;
+  border: solid rgb(0, 255, 125);
+  box-shadow: 0 0 7.5px 0.5px rgb(0, 255, 125);
+  color: white;
+  pointer-events: auto;
+}
+
+/* full screen */
+.navContainer {
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, 1fr);
+}
+.navMBar {
+  height: 20px;
+  border-bottom: solid rgb(0, 255, 125);
+  background-color: rgb(0, 255, 125);
+  pointer-events: none;
+}
+.navMBar img {
+  aspect-ratio: 1 / 1;
+  height: calc(100% - 2px);
+  float: right;
+  margin: 1px;
+  background-color: white;
+  box-shadow: inset -1.5px -1.5px gray;
+  pointer-events: auto;
+}
+.navMBar img:hover {
+  background-color: rgb(240, 240, 240);
+  box-shadow: inset 1.5px 1.5px gray;
+}
+#intro,
+#log,
+#gallery,
+#culife,
+#game,
+#theater,
+#hype1,
+#hype2 {
+  height: calc(100% - 20px);
+  position: relative;
+  box-shadow: 0 0 7.5px 0 rgb(0, 255, 125) inset;
+  pointer-events: auto;
+  background-color: black;
+}
+.navP {
+  font-size: 12.5px;
+  line-height: 150%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+/* large */
+@media only screen and (max-width: 950px) {
+  .navContainer {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+  }
+}
+
+/* medium */
+@media only screen and (max-width: 650px) {
+  .navContainer {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+
+/* small */
+@media only screen and (max-width: 425px) {
+  .navContainer {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}

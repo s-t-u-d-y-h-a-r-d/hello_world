@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/sub.css" />
+    <script src="../js/main.js"></script>
+    <script src="../js/btn.js"></script>
+    <link rel="icon" href="../img/icon.png" />
+    <title>INTRO</title>
+    <style>
+      .area {
+        font-size: 18px !important;
+        font-family: "devil" !important;
+        display: flex !important;
+        flex-direction: column !important;
+        height: calc(100% - 220px) !important;
+      }
+      .area img {
+        width: 45% !important;
+        margin: 0 auto !important;
+      }
+    </style>
+  </head>
+  <body onload="clock(); status();">
+    <div id="overlayA">
+      <div id="login">
+        <div id="loginbar">
+          <div id="esc"><img id="alertx" src="../img/bar/x.png" /></div>
+        </div>
+        <div id="loginArea" style="position: relative">
+          <div id="alert">!!! WARNING !!!<br /><span>TOO SMALL!</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="main">
+      <div id="bar">
+        <div id="time"></div>
+        <div id="status">
+          <img id="img1" src=i"mg/icon.png" /> <img id="img2" src=i"mg/icon.png"
+          /> <img id="img3" src=i"mg/icon.png" />
+        </div>
+      </div>
+
+      <div class="header">Introduction</div>
+
+      <div class="area">
+        <div id="introBox">
+          <img src="../img/logo.png" />
+          <p style="text-align: center">
+            &lt; is a personal blog of mine &gt;<br /><br /><br /><br />
+          </p>
+          <p>
+            ^ <span class="navName">Daily Log</span> : My Personal Diary<br /><br />
+            ^ <span class="navName">Gallery</span> : My Favorite Things<br /><br />
+            ^ <span class="navName">Cultural Life</span> : Movie, Drama, Music
+            etc.<br /><br />
+            ^ <span class="navName">Game</span> : Simple Game<br /><br />
+            ^ <span class="navName">Theater</span>: No Choice No Popcorns<br /><br />
+          </p>
+        </div>
+      </div>
+
+      <div id="footer">
+        <div id="snsbox">
+          <ul>
+            <!-- youtube -->
+            <li>
+              <img
+                id="snsbtn1"
+                src="../img/sns/ytb01.png"
+                onclick="btnclk(this);"
+              />
+            </li>
+            <!-- twitter -->
+            <li>
+              <img
+                id="snsbtn2"
+                src="../img/sns/twr01.png"
+                onclick="btnclk(this);"
+              />
+            </li>
+            <!-- instagram -->
+            <li>
+              <img
+                id="snsbtn3"
+                src="../img/sns/itg01.png"
+                onclick="btnclk(this);"
+              />
+            </li>
+            <!-- facebook -->
+            <li>
+              <img
+                id="snsbtn4"
+                src="../img/sns/fbk01.png"
+                onclick="btnclk(this);"
+              />
+            </li>
+          </ul>
+        </div>
+
+        <div id="copyright">
+          Copyright <span id="cc">©</span> 2022 LSJ All rights reserved.
+        </div>
+
+        <div id="logobox">
+          <a href="/index.html"><img src="../img/logo.png" /></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,323 @@
+@font-face {
+  font-family: "devil";
+  src: url("../font/Devil.ttf") format("truetype");
+}
+
+#main {
+  margin: 0 !important;
+  height: 100vh !important;
+}
+
+.header {
+  font-size: 35px;
+  font-family: "rect";
+  text-align: center;
+  color: white;
+  padding: 30px;
+  border-top: 2px solid rgb(0, 255, 125);
+  border-bottom: 2px solid rgb(0, 255, 125);
+  box-shadow: inset 0 7px 7.5px -7px rgb(0, 255, 125),
+    inset 0 -7px 7.5px -7px rgb(0, 255, 125);
+  background-image: url("../img/bgrd.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-shadow: 2px 2px black, 0 0 30px rgb(0, 255, 125),
+    0 0 40px rgb(0, 255, 125), 0 0 50px rgb(0, 255, 125);
+}
+.area {
+  color: white;
+  border-top: none;
+  padding: 30px;
+  font-size: 20px;
+  font-family: "rect";
+  min-height: calc(100% - 220px);
+  height: fit-content;
+  text-align: center;
+  box-shadow: inset 0 7px 7.5px -7px rgb(0, 255, 125),
+    inset 0 -7px 7.5px -7px rgb(0, 255, 125);
+  border-bottom: 2px solid rgb(0, 255, 125);
+}
+
+/* intro */
+.navName {
+  font-weight: bold;
+  color: rgb(0, 255, 125);
+}
+#introBox {
+  display: grid;
+  align-content: center;
+  height: 100% !important;
+}
+#introBox p {
+  text-align: justify;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+/* log */
+#logs {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(6, 1fr);
+}
+.plate {
+  border: solid rgb(0, 255, 125);
+  background-color: black;
+  box-shadow: 0 0 7.5px 0 rgb(0, 255, 125) inset, 0 0 7.5px 0 rgb(0, 255, 125);
+  padding: 15px;
+}
+.fold {
+  position: relative;
+  color: black;
+  text-align: left;
+  font-size: 15px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-150deg, transparent 1.5em, white 0);
+}
+.fold::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: linear-gradient(
+      to left bottom,
+      transparent 50%,
+      lightgrey 0,
+      lightgrey
+    )
+    no-repeat 100% 0;
+  width: 1.73em;
+  height: 3em;
+  transform: translateY(-1.3em) rotate(-30deg);
+  transform-origin: bottom right;
+  border-bottom-left-radius: inherit;
+  box-shadow: -0.2em 0.2em 0.3em -0.1em rgba(0, 0, 0, 0.5);
+}
+.fold p {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+}
+.overlay_log {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  place-items: center;
+  padding: none;
+}
+.popup_log {
+  padding: 20px;
+  background: #fff;
+  border: 2px solid rgb(0, 255, 125);
+  width: 50%;
+  max-height: fit-content;
+  position: relative;
+  box-shadow: 0 0 7.5px 0.5px rgb(0, 255, 125);
+}
+.popup_log p {
+  margin-top: 0;
+  color: black;
+  font-size: 22.5px;
+  font-family: "devil";
+}
+.popup_log .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+}
+.popup_log .close:hover {
+  color: #06d85f;
+}
+.popup_log .contentBox {
+  overflow-y: scroll;
+  max-height: 45vh;
+  margin-top: 15px;
+}
+.popup_log .content {
+  font-weight: normal;
+  font-size: 20px;
+}
+
+/* gallery */
+.slider {
+  width: 600px;
+  text-align: center;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+.slides {
+  display: flex;
+  height: calc(100% - 50px);
+  width: 100%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+.slides::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.slides::-webkit-scrollbar-thumb {
+  background-color: black;
+}
+.slides::-webkit-scrollbar-track {
+  background: transparent;
+}
+.slides div {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transform-origin: center center;
+  transform: scale(1);
+  transition: transform 0.5s;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+}
+.slides img {
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.popup_gal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  place-items: center;
+  gap: 30px;
+}
+.popup_gal img {
+  object-fit: cover;
+  position: none;
+  width: auto;
+  height: 70vh;
+}
+.popup_gal .close {
+  position: absolute;
+  top: 50px;
+  right: 55px;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+}
+.popup_gal .close:hover {
+  color: rgb(0, 255, 125);
+}
+#sliderbtnArea {
+  height: 50px;
+  padding: 7.5px 0 17.5px 0;
+}
+#sliderbtnArea a {
+  display: inline-flex;
+  width: 25px;
+  height: 25px;
+  background: transparent;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 100%;
+  align-items: center;
+  justify-content: center;
+  border: solid rgb(0, 255, 125);
+  position: relative;
+}
+#sliderbtnArea a:active {
+  color: rgb(0, 255, 125);
+}
+
+/* cultural life */
+#cul {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+/* theater */
+video {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: fill;
+  overflow: hidden;
+}
+#videoPlayer {
+  display: none;
+  height: 100%;
+  width: 100%;
+}
+#overlaym {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  cursor: pointer;
+}
+#playbtn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 950px) {
+  #logs {
+    gap: 20px;
+    grid-template-columns: repeat(5, 1fr);
+  }
+  #cul {
+    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  #logs {
+    gap: 15px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  #cul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .area {
+    padding: 20px;
+  }
+  #logs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #cul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
